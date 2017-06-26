@@ -1,8 +1,8 @@
 [{
-	"id": "file",
-	"children": [{
-	  "id": "go_to_factory",
+  "id": "file",
+  "children": [{
+    "id": "go_to_factory",
     "caption": "Go to Factory",
-	  "command": "go_to_factory"
-	}]
+    "command": "go_to_factory"
+  }]
 }]
