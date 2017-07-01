@@ -27,7 +27,8 @@ class GoToFactoryCommand(sublime_plugin.WindowCommand):
     filename = os.path.basename(current_file)
     filename, extension = os.path.splitext(filename)
 
-    if "app/models" in dirname:
+    if ("app/models" in dirname) or ("spec/models" in dirname):
+      filename = filename.replace("_spec", "")
       expected_factory_name = filename + "_factory.rb"
       expected_factory_path = app_root + "/lib/factories/" + expected_factory_name
       self.window.open_file(expected_factory_path)
